@@ -330,7 +330,7 @@ $result = $conn->query($sql);
         </div>
     <?php endif; ?>
     <div class="form-section">
-        <button onclick="window.location.href='login1.php'">Logout</button>
+        <button onclick="window.location.href='login.php'">Logout</button>
     </div>
 </div>
 

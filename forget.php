@@ -18,7 +18,7 @@ if (isset($_POST['forget'])) {
             $email=$_SESSION['email'];
             $update = "update register set pass='".$_POST['pass']."' where email='$email'";
             mysqli_query($conn, $update);
-            header('location:login1.php');
+            header('location:login.php');
             exit;
 }
 ?>
