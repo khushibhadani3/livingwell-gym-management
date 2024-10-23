@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
   <meta charset="UTF-8">
   <link rel="icon" href="https://png.pngtree.com/png-clipart/20220603/original/pngtree-fitness-gym-logo-png-image_7902040.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LivingWell - Register</title>
+  <title>Register Page</title>
   <!-- Css Styles -->
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
