@@ -110,6 +110,9 @@ if (isset($_POST['submit'])) {
         <input type="number" min="1" name="reg_age" required>
         <label>Enter your Age</label>
       </div>
+      <div class="register">
+        <p>back to Log In  <a href="login.php"> login</a></p>
+      </div>
       <button type="submit" name="submit">Register</button>
     </div>
   </form>
