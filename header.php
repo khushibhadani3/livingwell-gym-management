@@ -18,7 +18,7 @@
                         <li><a href="./team.php">Our Team</a></li>
                         <li><a href="./contact.php">Contact</a></li>
                         <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true): ?>
-                            <li><a href="./profile.php">Profile</a></li>
+                            <li><a href="./user_profile.php">Profile</a></li>
                         <?php elseif (isset($_SESSION['trainer_logged_in']) && $_SESSION['trainer_logged_in'] === true): ?>
                             <li><a href="./trainer_profile.php">Profile</a></li>
                         <?php else: ?>
