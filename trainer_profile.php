@@ -36,35 +36,6 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Offcanvas Menu Section Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="canvas-close">
-            <i class="fa fa-close"></i>
-        </div>
-        <div class="canvas-search search-switch">
-            <i class="fa fa-search"></i>
-        </div>
-        <nav class="canvas-menu mobile-menu">
-           <ul>
-            <li><a href="./index.php">Home</a></li>
-            <li><a href="./about-us.php">About Us</a></li>
-            <li><a href="./class-details.php">Classes</a></li>
-            <li><a href="./services.php">Services</a></li>
-            <li><a href="./team.php">Our Team</a></li>
-            <li><a href="./contact.php">Contact</a></li>
-            <li><a href="./userside/login.php">Log in</a></li>
-        </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-        <div class="canvas-social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-youtube-play"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-        </div>
-    </div>
-    <!-- Offcanvas Menu Section End -->
     <?php
         include './header.php';
     ?>  
@@ -74,7 +45,7 @@
         <section class="hero-section">
         <div class="hs-slider owl-carousel">
             <div class="hs-item set-bg" data-setbg="img/hero/hero-1.jpg">
-                    aaaa
+                    This Trainer Profile
             </div>
            
         </div>
