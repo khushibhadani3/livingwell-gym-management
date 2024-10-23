@@ -1,21 +1,10 @@
 <?php
-session_start(); // Start the session at the beginning
+session_start();
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "gym_management";
+include './connection.php';
 
-// Create connection
-$con = mysqli_connect($servername, $username, $password, $database);
-
-// Check connection
-if (!$con) {
-    die("ERROR!!" . mysqli_error($con));
-}
-
-$message = ""; // Initialize the message variable
-$success_message = ""; // Initialize the success message variable
+$message = "";
+$success_message = "";
 
 if (isset($_POST['submit'])) {
     $email = $_POST['reg_email'];
@@ -23,36 +12,35 @@ if (isset($_POST['submit'])) {
     $name = $_POST['reg_name'];
     $age = $_POST['reg_age'];
 
-    // Check if email is already registered
     $check_email_query = "SELECT * FROM tbl_register WHERE email = '$email'";
-    $check_email_result = mysqli_query($con, $check_email_query);
+    $check_email_result = mysqli_query($conn, $check_email_query);
 
     if (mysqli_num_rows($check_email_result) > 0) {
         $message = "Error: This email is already registered. Please use a different email.";
     } else {
-        // Password validation using preg_match (at least 8 characters, one letter, one number)
         if (preg_match('/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/', $password)) {
-            // Store the password directly without hashing
             $plain_password = $password;
 
-            // SQL query to insert user data
             $sql = "INSERT INTO tbl_register (email, password, name, age) VALUES ('$email', '$plain_password', '$name', '$age')";
 
-            if (mysqli_query($con, $sql)) {
-              $_SESSION['username'] = $name; // Store the name in session for later use in customer panel
-              $success_message = "Registration successful!";
-              header('Location: customer_panel.php'); // Redirect to customer panel
-              exit(); // Exit after redirect to prevent further code execution
-          }
-          else {
-                $message = "Error: " . mysqli_error($con);
+            if (mysqli_query($conn, $sql)) {
+                $_SESSION['username'] = $name;
+                $success_message = "Registration successful!";
+                
+                echo "<script>
+                        alert('$success_message');
+                        window.location.href = 'login.php';
+                      </script>";
+                exit();
+            } else {
+                $message = "Error: " . mysqli_error($conn);
             }
         } else {
             $message = "Error: Password must be at least 8 characters long and include at least one letter and one number.";
         }
     }
 
-    mysqli_close($con);
+    mysqli_close($conn);
 }
 ?>
 
