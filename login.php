@@ -40,7 +40,7 @@ if (isset($_POST['logsubmit'])) {
             if ($row['password'] == $pass) {
                 $_SESSION["name"] = $row['username']; // Set the username in the session
                 echo 'Session set, redirecting to customer panel...'; // Debug message
-                header('Location: userpanel.php'); // Redirect to customer panel or any other page
+                header('Location: profile.php'); // Redirect to customer panel or any other page
                 exit();
             } else {
                 $err[] = 'Incorrect password. Please try again.';
@@ -56,7 +56,7 @@ if (isset($_POST['logsubmit'])) {
             if ($insertStmt->execute()) {
                 $_SESSION["name"] = $username; // Set the username in the session
                 echo 'User  registered and logged in, redirecting to customer panel...'; // Debug message
-                header('Location: userpanel.php'); // Redirect to customer panel
+                header('Location: profile.php'); // Redirect to customer panel
                 exit();
             } else {
                 $err[] = 'Error registering user. Please try again.';

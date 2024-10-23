@@ -74,7 +74,7 @@
         <section class="hero-section">
         <div class="hs-slider owl-carousel">
             <div class="hs-item set-bg" data-setbg="img/hero/hero-1.jpg">
-                    aaaa
+                    This MY Profile
             </div>
            
         </div>
