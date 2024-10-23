@@ -52,7 +52,23 @@ if (isset($_POST['submit'])) {
   <link rel="icon" href="https://png.pngtree.com/png-clipart/20220603/original/pngtree-fitness-gym-logo-png-image_7902040.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LivingWell - Register</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Css Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <link rel="icon" href="https://png.pngtree.com/png-clipart/20220603/original/pngtree-fitness-gym-logo-png-image_7902040.png">
+    <script language="javascript" type="text/javascript">
+        window.history.forward();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>livingWell</title>
+    <link rel="stylesheet" href="style.css">
   <script>
   function showMessage() {
       var message = <?php echo json_encode($message); ?>;
@@ -69,6 +85,12 @@ if (isset($_POST['submit'])) {
   </script>
 </head>
 <body>
+<div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <?php
+        include './header.php';
+    ?> 
   <form name="frmreg" method="POST">
     <div class="wrapper">
       <h2>Register</h2>
@@ -91,5 +113,13 @@ if (isset($_POST['submit'])) {
       <button type="submit" name="submit">Register</button>
     </div>
   </form>
+  <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
